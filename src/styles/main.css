@@ -5,3 +5,82 @@
   overflow-x: hidden;
   overflow-y: auto; 
 }
+
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(187, 228, 233); 
+}
+
+/* Header section styling start */
+header{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+}
+
+.input-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 3vh;
+  margin-top: 25px;
+  gap: 50px;
+}
+
+#submit-btn{
+  cursor: pointer;
+  border-radius: 12px;
+  width: 150px;
+  font-size: 1em;
+  background: rgb(121, 194, 208); 
+  border: none;
+}
+
+#submit-btn:hover{
+  background: rgba(121, 194, 208, 0.8); 
+}
+
+#submit-btn:active{
+  background: rgb(118, 186, 199); 
+}
+
+#input-field{
+  cursor: pointer;
+  flex-grow: 1;
+  text-align: center;
+  width: 500px;
+  border-radius: 15px;
+	background: rgb(255, 255, 255); 
+  outline: none;
+  border: none;
+  font-size: 1em;
+}
+
+#input-field:focus{
+  background-color: whitesmoke;
+}
+
+/* Header section styling end */
+/* Main section styling start */
+main{
+  height: 75vh;
+}
+/* Main section styling end */
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  height: 5vh;
+  background: rgb(143, 185, 190); 
+}
+
+#link-anchor{
+  text-decoration: none !important; 
+  color: whitesmoke;
+}
+
+
