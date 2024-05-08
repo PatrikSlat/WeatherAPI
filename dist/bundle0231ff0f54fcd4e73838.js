@@ -28,7 +28,120 @@ ___CSS_LOADER_EXPORT___.push([module.id, `*, *::before, *::after{
   overflow-x: hidden;
   overflow-y: auto; 
 }
-`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,SAAS;EACT,UAAU;EACV,kBAAkB;EAClB,gBAAgB;AAClB","sourcesContent":["*, *::before, *::after{\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden;\n  overflow-y: auto; \n}\n"],"sourceRoot":""}]);
+
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(187, 228, 233); 
+}
+
+/* Header section styling START */
+header{
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+.input-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 3vh;
+  margin-top: 25px;
+  gap: 30px;
+}
+
+#submit-btn{
+  cursor: pointer;
+  border-radius: 12px;
+  width: 150px;
+  font-size: 1em;
+  background: rgb(121, 194, 208); 
+  border: none;
+}
+
+#submit-btn:hover{
+  background: rgba(121, 194, 208, 0.8); 
+}
+
+#submit-btn:active{
+  background: rgb(118, 186, 199); 
+}
+
+#input-field{
+  cursor: pointer;
+  flex-grow: 1;
+  text-align: center;
+  width: 500px;
+  border-radius: 15px;
+	background: rgb(255, 255, 255); 
+  outline: none;
+  border: none;
+  font-size: 1em;
+}
+
+#input-field:focus{
+  background-color: whitesmoke;
+}
+
+/* Header section styling END */
+/* Main section styling START */
+main{
+  display: flex;
+  justify-content: center;
+  height: 85vh;
+}
+
+.main-content{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 90%;
+  width: 35%;
+  background-color: red;
+  border-radius: 15%;
+  background: rgb(143, 185, 190);
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+.card-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 20%;
+  width: 100%;
+  gap: 20px;
+}
+.card-content{
+  height: 70%;
+  width: 100%;
+}
+.fetch-info{
+  height: 10%;
+  width: 100%;
+}
+
+/* Main section styling END */
+/* Footer section styling START */
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  height: 5vh;
+  background: rgb(143, 185, 190); 
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+}
+
+#link-anchor{
+  text-decoration: none !important; 
+  color: whitesmoke;
+}
+
+/* Footer section styling END */
+`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,SAAS;EACT,UAAU;EACV,kBAAkB;EAClB,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,aAAa;EACb,YAAY;EACZ,8BAA8B;AAChC;;AAEA,iCAAiC;AACjC;EACE,YAAY;EACZ,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,WAAW;EACX,gBAAgB;EAChB,SAAS;AACX;;AAEA;EACE,eAAe;EACf,mBAAmB;EACnB,YAAY;EACZ,cAAc;EACd,8BAA8B;EAC9B,YAAY;AACd;;AAEA;EACE,oCAAoC;AACtC;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,kBAAkB;EAClB,YAAY;EACZ,mBAAmB;CACpB,8BAA8B;EAC7B,aAAa;EACb,YAAY;EACZ,cAAc;AAChB;;AAEA;EACE,4BAA4B;AAC9B;;AAEA,+BAA+B;AAC/B,+BAA+B;AAC/B;EACE,aAAa;EACb,uBAAuB;EACvB,YAAY;AACd;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,sBAAsB;EACtB,WAAW;EACX,UAAU;EACV,qBAAqB;EACrB,kBAAkB;EAClB,8BAA8B;EAC9B,sHAAsH;AACxH;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,WAAW;EACX,WAAW;EACX,SAAS;AACX;AACA;EACE,WAAW;EACX,WAAW;AACb;AACA;EACE,WAAW;EACX,WAAW;AACb;;AAEA,6BAA6B;AAC7B,iCAAiC;AACjC;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,cAAc;EACd,WAAW;EACX,8BAA8B;EAC9B,sHAAsH;AACxH;;AAEA;EACE,gCAAgC;EAChC,iBAAiB;AACnB;;AAEA,+BAA+B","sourcesContent":["*, *::before, *::after{\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden;\n  overflow-y: auto; \n}\n\nbody{\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  width: 100vw;\n  background: rgb(187, 228, 233); \n}\n\n/* Header section styling START */\nheader{\n  height: 10vh;\n  display: flex;\n  justify-content: center;\n}\n\n.input-section{\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  height: 3vh;\n  margin-top: 25px;\n  gap: 30px;\n}\n\n#submit-btn{\n  cursor: pointer;\n  border-radius: 12px;\n  width: 150px;\n  font-size: 1em;\n  background: rgb(121, 194, 208); \n  border: none;\n}\n\n#submit-btn:hover{\n  background: rgba(121, 194, 208, 0.8); \n}\n\n#submit-btn:active{\n  background: rgb(118, 186, 199); \n}\n\n#input-field{\n  cursor: pointer;\n  flex-grow: 1;\n  text-align: center;\n  width: 500px;\n  border-radius: 15px;\n\tbackground: rgb(255, 255, 255); \n  outline: none;\n  border: none;\n  font-size: 1em;\n}\n\n#input-field:focus{\n  background-color: whitesmoke;\n}\n\n/* Header section styling END */\n/* Main section styling START */\nmain{\n  display: flex;\n  justify-content: center;\n  height: 85vh;\n}\n\n.main-content{\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  height: 90%;\n  width: 35%;\n  background-color: red;\n  border-radius: 15%;\n  background: rgb(143, 185, 190);\n  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);\n}\n\n.card-header{\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  height: 20%;\n  width: 100%;\n  gap: 20px;\n}\n.card-content{\n  height: 70%;\n  width: 100%;\n}\n.fetch-info{\n  height: 10%;\n  width: 100%;\n}\n\n/* Main section styling END */\n/* Footer section styling START */\nfooter{\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 1em;\n  height: 5vh;\n  background: rgb(143, 185, 190); \n  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);\n}\n\n#link-anchor{\n  text-decoration: none !important; \n  color: whitesmoke;\n}\n\n/* Footer section styling END */\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -471,6 +584,39 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/components/htmlDataRetriever.js":
+/*!*********************************************!*\
+  !*** ./src/components/htmlDataRetriever.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const getLocation =function getLocationAndPassToFetch(){
+    try{
+        const locationValue = document.querySelector("#input-field").value;
+        if(locationValue === ""){
+            addErrorClass();
+        }else{
+            return locationInput;
+        }
+    }catch(error){
+        console.log("Error while fetching location", error);
+    }
+}
+
+const addErrorClass = function LocationValueDidNotPassValidation(){
+    const locationValue = document.querySelector("#input-field")
+    locationValue.innerHTML = "NE RADIDDIDD"
+}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getLocation);
+
 /***/ })
 
 /******/ 	});
@@ -554,9 +700,12 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
+/* harmony import */ var _components_htmlDataRetriever_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/htmlDataRetriever.js */ "./src/components/htmlDataRetriever.js");
+
 
 //import "./assets/logo.png";
-let API_KEY = "c5c7c84163854bbbbeb05611240705"; 
+//For learning purposes the API KEY is placed in the JS File, beacuse DOTENV is not compatible with the frontend
+let API_KEY = "c5c7c84163854bbbbeb05611240705";
 
 const getData = async function fetchDataFromWeatherApi() {
   try {
@@ -570,12 +719,20 @@ const getData = async function fetchDataFromWeatherApi() {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  getData();
-});
+    const searchBtn = document.querySelector("#submit-btn");
+    searchBtn.addEventListener("click", () => {
+      try {
+        const location = (0,_components_htmlDataRetriever_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+      } catch (error) {
+        console.log("Error while fetching location", error);
+      }
+    });
+  });
+  
 
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle9400e19fe434a2d3660f.js.map
+//# sourceMappingURL=bundle0231ff0f54fcd4e73838.js.map
