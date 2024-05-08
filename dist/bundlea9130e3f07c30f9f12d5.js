@@ -586,6 +586,35 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/components/fetchWeatherApi.js":
+/*!*******************************************!*\
+  !*** ./src/components/fetchWeatherApi.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//For learning purposes the API KEY is placed inside the JS File, beacuse DOTENV is not compatible with the frontend/we dont have a backend setup.
+let API_KEY = "c5c7c84163854bbbbeb05611240705";
+
+const fetchData = async function fetchDataFromWeatherApi(location) {
+  try {
+    let url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}&callback=weatherCallback`
+    const response = await fetch(url, {mode : 'cors'});
+    const results = await response.json();
+    console.log(results); 
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fetchData);
+
+/***/ }),
+
 /***/ "./src/components/htmlDataRetriever.js":
 /*!*********************************************!*\
   !*** ./src/components/htmlDataRetriever.js ***!
@@ -598,7 +627,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const getLocation =function getLocationAndPassToFetch(){
     try{
-        const locationValue = document.querySelector("#input-field").value;
+        let locationValue = document.querySelector("#input-field").value;
         if(locationValue === ""){
             addErrorClass();
         }else{
@@ -610,8 +639,8 @@ const getLocation =function getLocationAndPassToFetch(){
 }
 
 const addErrorClass = function LocationValueDidNotPassValidation(){
-    const locationValue = document.querySelector("#input-field")
-    locationValue.innerHTML = "NE RADIDDIDD"
+    const locationValue = document.querySelector("#input-field");
+    locationValue.placeholder = "Your search is not valid !";
 }
 
 
@@ -701,28 +730,19 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
 /* harmony import */ var _components_htmlDataRetriever_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/htmlDataRetriever.js */ "./src/components/htmlDataRetriever.js");
+/* harmony import */ var _components_fetchWeatherApi_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/fetchWeatherApi.js */ "./src/components/fetchWeatherApi.js");
+
 
 
 //import "./assets/logo.png";
-//For learning purposes the API KEY is placed in the JS File, beacuse DOTENV is not compatible with the frontend
-let API_KEY = "c5c7c84163854bbbbeb05611240705";
 
-const getData = async function fetchDataFromWeatherApi() {
-  try {
-    // Assuming your server-side proxy is set up at /api/weather
-    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=london&callback=weatherCallback`, {mode : 'cors'});
-    const results = await response.json();
-    console.log(results); 
-  } catch (error) {
-    console.log(error);
-  }
-};
 
 document.addEventListener("DOMContentLoaded", () => {
     const searchBtn = document.querySelector("#submit-btn");
     searchBtn.addEventListener("click", () => {
       try {
-        const location = (0,_components_htmlDataRetriever_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+        let location = (0,_components_htmlDataRetriever_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+        console.log((0,_components_fetchWeatherApi_js__WEBPACK_IMPORTED_MODULE_2__["default"])(location));
       } catch (error) {
         console.log("Error while fetching location", error);
       }
@@ -735,4 +755,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle0231ff0f54fcd4e73838.js.map
+//# sourceMappingURL=bundlea9130e3f07c30f9f12d5.js.map
