@@ -110,17 +110,66 @@ main{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 20%;
+  height: 10%;
   width: 100%;
   gap: 20px;
 }
 .card-content{
-  height: 70%;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
   width: 100%;
 }
 .fetch-info{
   height: 10%;
   width: 100%;
+}
+
+.card-content > * {
+  height: 50%;
+  width: 100%;
+}
+
+.row-1{
+  display: flex;
+  align-items: center;
+  flex-direction: column;  
+  font-size: 1.5em;
+  color: white;
+  font-weight: bolder;
+  font-family: monospace;
+  font-stretch: extra-expanded;
+}
+
+.row-2{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  color: white;
+  font-weight: bolder;
+  font-family: monospace;
+  font-stretch: extra-expanded;
+}
+
+#your-search{
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: white;
+  font-weight: bolder;
+  font-family: monospace;
+  font-stretch: extra-expanded;
+}
+
+img{
+  height: 100px;
+  width: 100px;
+}
+
+#temp-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Main section styling END */
@@ -141,7 +190,7 @@ footer{
 }
 
 /* Footer section styling END */
-`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,SAAS;EACT,UAAU;EACV,kBAAkB;EAClB,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,aAAa;EACb,YAAY;EACZ,8BAA8B;AAChC;;AAEA,iCAAiC;AACjC;EACE,YAAY;EACZ,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,WAAW;EACX,gBAAgB;EAChB,SAAS;AACX;;AAEA;EACE,eAAe;EACf,mBAAmB;EACnB,YAAY;EACZ,cAAc;EACd,8BAA8B;EAC9B,YAAY;AACd;;AAEA;EACE,oCAAoC;AACtC;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,kBAAkB;EAClB,YAAY;EACZ,mBAAmB;CACpB,8BAA8B;EAC7B,aAAa;EACb,YAAY;EACZ,cAAc;AAChB;;AAEA;EACE,4BAA4B;AAC9B;;AAEA,+BAA+B;AAC/B,+BAA+B;AAC/B;EACE,aAAa;EACb,uBAAuB;EACvB,YAAY;AACd;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,sBAAsB;EACtB,WAAW;EACX,UAAU;EACV,qBAAqB;EACrB,kBAAkB;EAClB,8BAA8B;EAC9B,sHAAsH;AACxH;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,WAAW;EACX,WAAW;EACX,SAAS;AACX;AACA;EACE,WAAW;EACX,WAAW;AACb;AACA;EACE,WAAW;EACX,WAAW;AACb;;AAEA,6BAA6B;AAC7B,iCAAiC;AACjC;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,cAAc;EACd,WAAW;EACX,8BAA8B;EAC9B,sHAAsH;AACxH;;AAEA;EACE,gCAAgC;EAChC,iBAAiB;AACnB;;AAEA,+BAA+B","sourcesContent":["*, *::before, *::after{\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden;\n  overflow-y: auto; \n}\n\nbody{\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  width: 100vw;\n  background: rgb(187, 228, 233); \n}\n\n/* Header section styling START */\nheader{\n  height: 10vh;\n  display: flex;\n  justify-content: center;\n}\n\n.input-section{\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  height: 3vh;\n  margin-top: 25px;\n  gap: 30px;\n}\n\n#submit-btn{\n  cursor: pointer;\n  border-radius: 12px;\n  width: 150px;\n  font-size: 1em;\n  background: rgb(121, 194, 208); \n  border: none;\n}\n\n#submit-btn:hover{\n  background: rgba(121, 194, 208, 0.8); \n}\n\n#submit-btn:active{\n  background: rgb(118, 186, 199); \n}\n\n#input-field{\n  cursor: pointer;\n  flex-grow: 1;\n  text-align: center;\n  width: 500px;\n  border-radius: 15px;\n\tbackground: rgb(255, 255, 255); \n  outline: none;\n  border: none;\n  font-size: 1em;\n}\n\n#input-field:focus{\n  background-color: whitesmoke;\n}\n\n/* Header section styling END */\n/* Main section styling START */\nmain{\n  display: flex;\n  justify-content: center;\n  height: 85vh;\n}\n\n.main-content{\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  height: 90%;\n  width: 35%;\n  background-color: red;\n  border-radius: 15%;\n  background: rgb(143, 185, 190);\n  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);\n}\n\n.card-header{\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  height: 20%;\n  width: 100%;\n  gap: 20px;\n}\n.card-content{\n  height: 70%;\n  width: 100%;\n}\n.fetch-info{\n  height: 10%;\n  width: 100%;\n}\n\n/* Main section styling END */\n/* Footer section styling START */\nfooter{\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 1em;\n  height: 5vh;\n  background: rgb(143, 185, 190); \n  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);\n}\n\n#link-anchor{\n  text-decoration: none !important; \n  color: whitesmoke;\n}\n\n/* Footer section styling END */\n"],"sourceRoot":""}]);
+`, "",{"version":3,"sources":["webpack://./src/styles/main.css"],"names":[],"mappings":"AAAA;EACE,sBAAsB;EACtB,SAAS;EACT,UAAU;EACV,kBAAkB;EAClB,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,aAAa;EACb,YAAY;EACZ,8BAA8B;AAChC;;AAEA,iCAAiC;AACjC;EACE,YAAY;EACZ,aAAa;EACb,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,WAAW;EACX,gBAAgB;EAChB,SAAS;AACX;;AAEA;EACE,eAAe;EACf,mBAAmB;EACnB,YAAY;EACZ,cAAc;EACd,8BAA8B;EAC9B,YAAY;AACd;;AAEA;EACE,oCAAoC;AACtC;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,eAAe;EACf,YAAY;EACZ,kBAAkB;EAClB,YAAY;EACZ,mBAAmB;CACpB,8BAA8B;EAC7B,aAAa;EACb,YAAY;EACZ,cAAc;AAChB;;AAEA;EACE,4BAA4B;AAC9B;;AAEA,+BAA+B;AAC/B,+BAA+B;AAC/B;EACE,aAAa;EACb,uBAAuB;EACvB,YAAY;AACd;;AAEA;EACE,aAAa;EACb,uBAAuB;EACvB,sBAAsB;EACtB,WAAW;EACX,UAAU;EACV,qBAAqB;EACrB,kBAAkB;EAClB,8BAA8B;EAC9B,sHAAsH;AACxH;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,uBAAuB;EACvB,WAAW;EACX,WAAW;EACX,SAAS;AACX;AACA;EACE,aAAa;EACb,sBAAsB;EACtB,WAAW;EACX,WAAW;AACb;AACA;EACE,WAAW;EACX,WAAW;AACb;;AAEA;EACE,WAAW;EACX,WAAW;AACb;;AAEA;EACE,aAAa;EACb,mBAAmB;EACnB,sBAAsB;EACtB,gBAAgB;EAChB,YAAY;EACZ,mBAAmB;EACnB,sBAAsB;EACtB,4BAA4B;AAC9B;;AAEA;EACE,mBAAmB;EACnB,aAAa;EACb,sBAAsB;EACtB,gBAAgB;EAChB,YAAY;EACZ,mBAAmB;EACnB,sBAAsB;EACtB,4BAA4B;AAC9B;;AAEA;EACE,gBAAgB;EAChB,gBAAgB;EAChB,YAAY;EACZ,mBAAmB;EACnB,sBAAsB;EACtB,4BAA4B;AAC9B;;AAEA;EACE,aAAa;EACb,YAAY;AACd;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,mBAAmB;AACrB;;AAEA,6BAA6B;AAC7B,iCAAiC;AACjC;EACE,aAAa;EACb,uBAAuB;EACvB,mBAAmB;EACnB,cAAc;EACd,WAAW;EACX,8BAA8B;EAC9B,sHAAsH;AACxH;;AAEA;EACE,gCAAgC;EAChC,iBAAiB;AACnB;;AAEA,+BAA+B","sourcesContent":["*, *::before, *::after{\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  overflow-x: hidden;\n  overflow-y: auto; \n}\n\nbody{\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  width: 100vw;\n  background: rgb(187, 228, 233); \n}\n\n/* Header section styling START */\nheader{\n  height: 10vh;\n  display: flex;\n  justify-content: center;\n}\n\n.input-section{\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  height: 3vh;\n  margin-top: 25px;\n  gap: 30px;\n}\n\n#submit-btn{\n  cursor: pointer;\n  border-radius: 12px;\n  width: 150px;\n  font-size: 1em;\n  background: rgb(121, 194, 208); \n  border: none;\n}\n\n#submit-btn:hover{\n  background: rgba(121, 194, 208, 0.8); \n}\n\n#submit-btn:active{\n  background: rgb(118, 186, 199); \n}\n\n#input-field{\n  cursor: pointer;\n  flex-grow: 1;\n  text-align: center;\n  width: 500px;\n  border-radius: 15px;\n\tbackground: rgb(255, 255, 255); \n  outline: none;\n  border: none;\n  font-size: 1em;\n}\n\n#input-field:focus{\n  background-color: whitesmoke;\n}\n\n/* Header section styling END */\n/* Main section styling START */\nmain{\n  display: flex;\n  justify-content: center;\n  height: 85vh;\n}\n\n.main-content{\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  height: 90%;\n  width: 35%;\n  background-color: red;\n  border-radius: 15%;\n  background: rgb(143, 185, 190);\n  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);\n}\n\n.card-header{\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  height: 10%;\n  width: 100%;\n  gap: 20px;\n}\n.card-content{\n  display: flex;\n  flex-direction: column;\n  height: 80%;\n  width: 100%;\n}\n.fetch-info{\n  height: 10%;\n  width: 100%;\n}\n\n.card-content > * {\n  height: 50%;\n  width: 100%;\n}\n\n.row-1{\n  display: flex;\n  align-items: center;\n  flex-direction: column;  \n  font-size: 1.5em;\n  color: white;\n  font-weight: bolder;\n  font-family: monospace;\n  font-stretch: extra-expanded;\n}\n\n.row-2{\n  align-items: center;\n  display: flex;\n  flex-direction: column;\n  font-size: 1.5em;\n  color: white;\n  font-weight: bolder;\n  font-family: monospace;\n  font-stretch: extra-expanded;\n}\n\n#your-search{\n  margin-top: 10px;\n  font-size: 1.5em;\n  color: white;\n  font-weight: bolder;\n  font-family: monospace;\n  font-stretch: extra-expanded;\n}\n\nimg{\n  height: 100px;\n  width: 100px;\n}\n\n#temp-info{\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n/* Main section styling END */\n/* Footer section styling START */\nfooter{\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 1em;\n  height: 5vh;\n  background: rgb(143, 185, 190); \n  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);\n}\n\n#link-anchor{\n  text-decoration: none !important; \n  color: whitesmoke;\n}\n\n/* Footer section styling END */\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -586,6 +635,44 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/components/DisplayData.js":
+/*!***************************************!*\
+  !*** ./src/components/DisplayData.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const displayData = function displayAndStyleFetchedData(data){
+    const dataParsed = JSON.parse(data);
+    console.log(dataParsed);
+    const htmlElements = getElements();
+
+    htmlElements.searchInfo.innerHTML = `Your search for ${dataParsed.location.name}, ${dataParsed.location.country}`;
+    htmlElements.tempDiv.innerHTML = `Currently ${dataParsed.current.condition.text}, ${dataParsed.current.feelslike_c} °C`;
+    htmlElements.windDiv.innerHTML = `Wind: ${dataParsed.current.wind_kph} km/h / ${dataParsed.current.wind_mph} mp/h`;
+
+    const weatherIcon = document.createElement("img");
+    weatherIcon.src = `https:${dataParsed.current.condition.icon}`;
+    htmlElements.tempDiv.appendChild(weatherIcon);
+    
+}
+
+const getElements = function GetHTMLelementsFromDOM(){
+    const searchInfo = document.querySelector("#your-search");
+    const basicInfo = document.querySelector(".basic-info");
+    const tempDiv = document.querySelector("#temp-info");
+    const windDiv = document.querySelector("#wind-info");
+    return { searchInfo, basicInfo, tempDiv, windDiv};
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayData);
+
+
+/***/ }),
+
 /***/ "./src/components/fetchWeatherApi.js":
 /*!*******************************************!*\
   !*** ./src/components/fetchWeatherApi.js ***!
@@ -596,15 +683,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//For learning purposes the API KEY is placed inside the JS File, beacuse DOTENV is not compatible with the frontend/we dont have a backend setup.
+//For learning purposes the API KEY is placed inside the JS File, beacuse DOTENV is not compatible with the frontend/we didnt setup a backend.
 let API_KEY = "c5c7c84163854bbbbeb05611240705";
 
-const fetchData = async function fetchDataFromWeatherApi(location) {
+const fetchData = async function fetchDataFromWeatherApi(userSearch) {
   try {
-    let url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${location}&callback=weatherCallback`
+    const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${userSearch}&callback=weatherCallback`
     const response = await fetch(url, {mode : 'cors'});
     const results = await response.json();
-    console.log(results); 
+    return results;
   } catch (error) {
     console.log(error);
   }
@@ -631,7 +718,7 @@ const getLocation =function getLocationAndPassToFetch(){
         if(locationValue === ""){
             addErrorClass();
         }else{
-            return locationInput;
+            return locationValue;
         }
     }catch(error){
         console.log("Error while fetching location", error);
@@ -731,6 +818,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.css */ "./src/styles/main.css");
 /* harmony import */ var _components_htmlDataRetriever_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/htmlDataRetriever.js */ "./src/components/htmlDataRetriever.js");
 /* harmony import */ var _components_fetchWeatherApi_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/fetchWeatherApi.js */ "./src/components/fetchWeatherApi.js");
+/* harmony import */ var _components_DisplayData_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/DisplayData.js */ "./src/components/DisplayData.js");
+
 
 
 
@@ -742,9 +831,12 @@ document.addEventListener("DOMContentLoaded", () => {
     searchBtn.addEventListener("click", () => {
       try {
         let location = (0,_components_htmlDataRetriever_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
-        console.log((0,_components_fetchWeatherApi_js__WEBPACK_IMPORTED_MODULE_2__["default"])(location));
+        const fetch = (0,_components_fetchWeatherApi_js__WEBPACK_IMPORTED_MODULE_2__["default"])(location).then((res) => {
+            (0,_components_DisplayData_js__WEBPACK_IMPORTED_MODULE_3__["default"])(JSON.stringify(res));
+        })
       } catch (error) {
         console.log("Error while fetching location", error);
+        //Create another func in htmldataretriever to catch no match inputs
       }
     });
   });
@@ -755,4 +847,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /******/ })()
 ;
-//# sourceMappingURL=bundlea9130e3f07c30f9f12d5.js.map
+//# sourceMappingURL=bundlee31615dd479379d75b57.js.map
