@@ -2,7 +2,6 @@ import windImg from "../assets/wind.png"
 
 const displayData = function displayAndStyleFetchedData(data){
     const dataParsed = JSON.parse(data);
-    console.log(dataParsed);
     const htmlElements = getElements();
 
     htmlElements.searchInfo.innerHTML = `Your search for ${dataParsed.location.name}, ${dataParsed.location.country}`;

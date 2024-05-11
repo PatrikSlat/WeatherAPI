@@ -11,11 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         let location = getLocation();
         const fetch = fetchData(location).then((res) => {
-            displayData(JSON.stringify(res));
+            if(res.error){
+                alert("No such value !");
+            }else{
+                displayData(JSON.stringify(res));
+            }
         })
       } catch (error) {
         console.log("Error while fetching location", error);
-        //Create another func in htmldataretriever to catch no match inputs
       }
     });
   });
