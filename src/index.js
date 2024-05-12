@@ -24,3 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
 
+  document.addEventListener("DOMContentLoaded", function() {
+    const loader = document.getElementById('preloader');
+  
+    setTimeout(() => {
+      loader.style.display = 'none';
+    }, 1500); 
+  });
+  
